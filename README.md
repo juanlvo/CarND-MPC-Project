@@ -1,7 +1,10 @@
 # CarND-Controls-MPC
-Self-Driving Car Engineer Nanodegree Program
+Self-Driving Car Engineer Nanodegree Program solution from Juan Luis Vivas Occhipinti
 
 ---
+
+[//]: # (Image References)
+[imgage1]: img/1.png "Equations"
 
 ## Dependencies
 
@@ -124,3 +127,54 @@ that's just a guess.
 
 One last note here: regardless of the IDE used, every submitted project must
 still be compilable with cmake and make./
+
+## Project Rubric
+
+<b>Compilation</b>
+<table>
+	<tr>
+		<th>Criteria</th>
+		<th>Meets Specifications</th>
+	</tr>
+	<tr>
+		<td>Your code should compile.</td>
+		<td>Yes, the code compile without any error.</td>
+	</tr>
+</table>
+
+<b>Implementation</b>
+<table>
+	<tr>
+		<th>Criteria</th>
+		<th>Meets Specifications</th>
+	</tr>
+	<tr>
+		<td>The Model.</td>
+		<td>The model implemented include the x and y coordinate of the vehicle, the orientation angle (psi), the velocity, the cross track error and the psi error (epsi). You can find as well the output of the acceleration and delta (stereling angle). In the model is combine the actual state and the previous timestep base on the equation below:
+		![alt text][image1]</td>
+	</tr>
+	<tr>
+		<td>Timestep Length and Elapsed Duration (N & dt)</td>
+		<td>The parameter were choose after reading recomendations in the forums.</td>
+	</tr>
+	<tr>
+		<td>Polynomial Fitting and MPC Preprocessing</td>
+		<td>A polynomial is fitted to waypoints with the preprocesses of the waypoints. This can be found it between lines 115 and 122 in the main.cpp</td>
+	</tr>
+	<tr>
+		<td>Model Predictive Control with Latency</td>
+		<td>The model is predicting every twofolds this is implemented between lines 103 and 106 in MPC.cpp</td>
+	</tr>
+</table>
+
+<b>Simulation</b>
+<table>
+	<tr>
+		<th>Criteria</th>
+		<th>Meets Specifications</th>
+	</tr>
+	<tr>
+		<td>The vehicle must successfully drive a lap around the track.</td>
+		<td>Yes, the vehicle is drive successfully the track.</td>
+	</tr>
+</table>
