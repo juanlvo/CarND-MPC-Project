@@ -151,7 +151,7 @@ still be compilable with cmake and make./
 	<tr>
 		<td>The Model.</td>
 		<td>The model implemented include the x and y coordinate of the vehicle, the orientation angle (psi), the velocity, the cross track error and the psi error (epsi). You can find as well the output of the acceleration and delta (stereling angle). In the model is combine the actual state and the previous timestep base on the equation below:
-		![alt text][image1]</td>
+		 <img src="img/1.png" alt="Equations"> </td>
 	</tr>
 	<tr>
 		<td>Timestep Length and Elapsed Duration (N & dt)</td>
