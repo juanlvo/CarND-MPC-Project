@@ -155,7 +155,7 @@ still be compilable with cmake and make./
 	</tr>
 	<tr>
 		<td>Timestep Length and Elapsed Duration (N & dt)</td>
-		<td>The parameter were choose after reading recomendations in the forums.</td>
+		<td>The parameter were choose after reading recomendations in the forums, after some modifications of the parameter we can see in the case of dt if we set to lower values than 0.1 the vehicle is driving more chaotic also we can see how the vehicle is driving outside of the track, when is bigger we can see how the vehicle is driving so slow actually in the class of MPC we can see recomendation of using dt=0.5 which is quite good but we got the issue with the speed. In the case of N this value also can be found in the class of MPC where was recomended N=10 if we change the value to something lower of higher the vehicle is driving really chaotic driving outside of the track as well. In this case N is the number of Timesteps. Is important as well to take into the consideration the tunning made it by the author with the steering_angle were the division is by 40 instead of 25 because the driving is more accurate than using 25 (this is what he have seen in practice)</td>
 	</tr>
 	<tr>
 		<td>Polynomial Fitting and MPC Preprocessing</td>
@@ -163,7 +163,7 @@ still be compilable with cmake and make./
 	</tr>
 	<tr>
 		<td>Model Predictive Control with Latency</td>
-		<td>The model is predicting every twofolds this is implemented between lines 103 and 106 in MPC.cpp</td>
+		<td>The model is taking into consideration the latency wich is the diference of time since we apply an stereling angle until finally the is puuting in place the angle (because we are using an mechanical system which can't handle instantly the changing of an angle) this can be localize between the lines 105 and 108 in MPC.cpp</td>
 	</tr>
 </table>
 
